@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createGoogleApiClient() {
-        GoogleApiClient googleApiClient = new GoogleApiClient.Builder(this)
+         googleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
                     @Override
@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-
         LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, mLocationRequest, new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
